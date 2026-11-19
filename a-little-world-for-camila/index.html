@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#12060c">
+<meta name="description" content="A little world made just for Camila.">
+<title>For Camila ♡</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,500&family=Pinyon+Script&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Flower artwork, drawn once and reused everywhere -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="gSpider" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff4d6a"/><stop offset=".55" stop-color="#b3183c"/><stop offset="1" stop-color="#5c0b22"/>
+    </linearGradient>
+    <linearGradient id="gLily" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#d9d3e6"/><stop offset="1" stop-color="#8f74b5"/>
+    </linearGradient>
+    <linearGradient id="gStem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6b7a5e"/><stop offset="1" stop-color="#2b3326"/>
+    </linearGradient>
+    <symbol id="spider" viewBox="-60 -60 120 120">
+      <g fill="none" stroke="#e8ecf4" stroke-width=".8" stroke-linecap="round" opacity=".9">
+        <path d="M0 0C6-18 18-34 34-46"/><path d="M0 0C14-12 32-18 50-16"/><path d="M0 0C10 6 30 12 46 26"/>
+        <path d="M0 0C-6-18-18-34-34-46"/><path d="M0 0C-14-12-32-18-50-16"/><path d="M0 0C-10 6-30 12-46 26"/>
+        <path d="M0 0C2-20 4-38 2-54"/>
+      </g>
+      <g fill="#ff8a9c"><circle cx="34" cy="-46" r="1.8"/><circle cx="50" cy="-16" r="1.8"/><circle cx="46" cy="26" r="1.8"/><circle cx="-34" cy="-46" r="1.8"/><circle cx="-50" cy="-16" r="1.8"/><circle cx="-46" cy="26" r="1.8"/><circle cx="2" cy="-54" r="1.8"/></g>
+      <g fill="url(#gSpider)">
+        <path id="spPetal" d="M0 0C4-6 6-16 4-26C3-31 6-34 10-32C6-34 2-32 0-27C-3-18-4-8 0 0Z"/>
+        <use href="#spPetal" transform="rotate(60)"/><use href="#spPetal" transform="rotate(120)"/>
+        <use href="#spPetal" transform="rotate(180)"/><use href="#spPetal" transform="rotate(240)"/><use href="#spPetal" transform="rotate(300)"/>
+      </g>
+      <circle r="3" fill="#5c0b22"/>
+    </symbol>
+    <symbol id="lily" viewBox="-50 -50 100 100">
+      <g fill="url(#gLily)" stroke="#a99cc2" stroke-width=".5">
+        <path id="lyPetal" d="M0 0C9-10 10-28 0-44C-10-28-9-10 0 0Z"/>
+        <use href="#lyPetal" transform="rotate(60)"/><use href="#lyPetal" transform="rotate(120)"/>
+        <use href="#lyPetal" transform="rotate(180)"/><use href="#lyPetal" transform="rotate(240)"/><use href="#lyPetal" transform="rotate(300)"/>
+      </g>
+      <g stroke="#7d1533" stroke-width=".6" opacity=".55" fill="none">
+        <path d="M0-4V-26"/><path d="M3-2 20-14"/><path d="M-3-2-20-14"/><path d="M3 2 20 14"/><path d="M-3 2-20 14"/><path d="M0 4V26"/>
+      </g>
+      <g stroke="#cfd2dc" stroke-width=".9" stroke-linecap="round"><path d="M0 0 5-14"/><path d="M0 0-6-13"/><path d="M0 0 12-7"/><path d="M0 0-12-6"/></g>
+      <g fill="#8b2a3c"><circle cx="5" cy="-14" r="1.6"/><circle cx="-6" cy="-13" r="1.6"/><circle cx="12" cy="-7" r="1.6"/><circle cx="-12" cy="-6" r="1.6"/></g>
+      <circle r="2.6" fill="#e9e2f2"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="atmosphere" aria-hidden="true"><div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="petals" id="petals" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="#home" data-go="home" aria-label="Back to the welcome page">
+    <svg class="brand-flower" aria-hidden="true"><use href="#spider"/></svg><span>for Camila</span>
+  </a>
+  <nav aria-label="Website pages">
+    <button class="active" data-page="home">Welcome</button>
+    <button data-page="letter">Letter</button>
+    <button data-page="little-things">Little Things</button>
+    <button data-page="surprise">Secret</button>
+    <button data-page="question">The Question</button>
+    <button data-page="countdown-page">Countdown</button>
+    <button data-page="poster">Poster</button>
+  </nav>
+</header>
+
+<main>
+
+<!-- WELCOME -->
+<section class="panel active" id="home" aria-labelledby="homeTitle">
+  <div class="hero">
+    <svg class="deco deco-tl" aria-hidden="true"><use href="#spider"/></svg>
+    <svg class="deco deco-br" aria-hidden="true"><use href="#lily"/></svg>
+    <svg class="deco deco-tr small" aria-hidden="true"><use href="#lily"/></svg>
+    <svg class="deco deco-bl small" aria-hidden="true"><use href="#spider"/></svg>
+    <p class="eyebrow reveal">a little world made just for</p>
+    <h1 id="homeTitle" class="script-title reveal">Camila</h1>
+    <div class="divider reveal" aria-hidden="true"><span></span>✦<span></span></div>
+    <p class="lead reveal">Some people walk into your life and everything gets a little softer, a little brighter, a little more worth it. You're that person for me.</p>
+    <p class="lead reveal">So I made you this: a few pages full of lilies, small secrets and things that remind me of you.</p>
+    <div class="actions reveal">
+      <button class="primary" data-go="letter">Start here ♡</button>
+      <button class="soft" data-go="little-things">Peek at the little things</button>
+    </div>
+    <div class="charm-row reveal" aria-hidden="true">
+      <span title="anime">🌸</span><span title="FNAF">🐻</span><span title="LEGO">🧱</span><span title="motorcycles">🏍️</span><span title="Hello Kitty">🎀</span><span title="Kuromi">🖤</span>
+    </div>
+    <button class="hidden-star" id="hiddenStar" aria-label="A tiny hidden star">✧</button>
+    <p class="star-note" id="starNote" role="status" aria-live="polite"></p>
+  </div>
+</section>
+
+<!-- LETTER -->
+<section class="panel" id="letter" aria-labelledby="letterTitle">
+  <div class="card">
+    <p class="eyebrow">sealed with a spider lily</p>
+    <h2 id="letterTitle">A letter for Camila</h2>
+    <div class="envelope" id="envelope">
+      <button class="seal" id="openEnvelope" aria-expanded="false" aria-controls="letterPaper">
+        <svg aria-hidden="true"><use href="#spider"/></svg><span>tap to open</span>
+      </button>
+      <div class="letter-paper" id="letterPaper">
+        <svg class="paper-lily" aria-hidden="true"><use href="#lily"/></svg>
+        <div class="letter" id="letterPreview"></div>
+      </div>
+    </div>
+    <details class="editor-box">
+      <summary>Edit the letter</summary>
+      <div class="editor">
+        <label for="letterInput">Make this letter yours. Edit any words you like.</label>
+        <textarea id="letterInput" rows="12"></textarea>
+      </div>
+      <div class="actions">
+        <button class="primary" id="updateLetter">Update letter</button>
+        <button class="soft" id="copyLetter">Copy letter</button>
+        <button class="soft" id="resetLetter">Restore suggested letter</button>
+      </div>
+      <p class="note">Edits are saved in this browser only. Copy the letter if you want a backup.</p>
+    </details>
+    <div class="next"><button class="link" data-go="little-things">Next: the little things →</button></div>
+  </div>
+</section>
+
+<!-- LITTLE THINGS -->
+<section class="panel" id="little-things" aria-labelledby="thingsTitle">
+  <div class="card intro-card">
+    <p class="eyebrow">tap, play, explore</p>
+    <h2 id="thingsTitle">Little things that remind me of you</h2>
+    <p>Everything you love says something about you. These are some of my favourite things about you.</p>
+  </div>
+  <div class="things-grid">
+
+    <article class="thing anime">
+      <div class="thing-head"><span class="thing-icon" aria-hidden="true">🌸</span><h3>Anime</h3><span class="tag">Ep. ∞</span></div>
+      <p class="thing-text" id="animeText">If our story were an anime, this would be the slow-motion episode. Petals in the wind, the soundtrack swelling…</p>
+      <p class="jp" aria-hidden="true">大好き</p>
+      <button class="soft small-btn" id="animeBtn">Next episode ▸</button>
+    </article>
+
+    <article class="thing fnaf" id="fnafCard">
+      <div class="thing-head"><span class="thing-icon" aria-hidden="true">🐻</span><h3>Five Nights</h3><span class="tag clock" id="fnafClock">12 AM</span></div>
+      <div class="fnaf-room" id="fnafRoom">
+        <p class="fnaf-hidden">Five nights? I'd stay every night if it meant spending them with you. (I'd still scream at every jumpscare, though.)</p>
+        <div class="fnaf-eyes" aria-hidden="true"><i></i><i></i></div>
+        <div class="fnaf-dark" aria-hidden="true"></div>
+      </div>
+      <button class="soft small-btn" id="flashBtn" aria-pressed="false">🔦 Flashlight on</button>
+    </article>
+
+    <article class="thing lego">
+      <div class="thing-head"><span class="thing-icon" aria-hidden="true">🧱</span><h3>LEGO</h3><span class="tag" id="brickCount">0 / 6</span></div>
+      <div class="brick-stage" id="brickStage" aria-hidden="true"></div>
+      <p class="thing-text" id="legoText">Let's build something together, one brick at a time.</p>
+      <button class="soft small-btn" id="brickBtn">Add a brick +</button>
+    </article>
+
+    <article class="thing moto">
+      <div class="thing-head"><span class="thing-icon" aria-hidden="true">🏍️</span><h3>Motorcycles</h3><span class="tag">0 → 100</span></div>
+      <div class="road" aria-hidden="true"><span class="bike" id="bike">🏍️</span><span class="road-line"></span></div>
+      <p class="thing-text" id="motoText">Helmet on, hold on tight.</p>
+      <button class="soft small-btn" id="revBtn">Rev the engine 🔥</button>
+    </article>
+
+    <article class="thing kitty" id="kittyCard" data-mode="sweet">
+      <div class="thing-head"><span class="thing-icon" id="kittyIcon" aria-hidden="true">🎀</span><h3>Hello Kitty &amp; Kuromi</h3></div>
+      <div class="switch" role="group" aria-label="Choose a side">
+        <button class="active" data-mode="sweet" aria-pressed="true">🎀 Sweet</button>
+        <button data-mode="spooky" aria-pressed="false">💀 Spooky</button>
+      </div>
+      <p class="thing-text" id="kittyText">Your Hello Kitty side: soft, kind, the kind of sweet that makes everyone around you feel safe.</p>
+    </article>
+
+  </div>
+  <div class="next"><button class="link" data-go="surprise">Next: a secret →</button></div>
+</section>
+
+<!-- SECRET -->
+<section class="panel" id="surprise" aria-labelledby="secretTitle">
+  <div class="card">
+    <p class="eyebrow">for your eyes only</p>
+    <h2 id="secretTitle">A secret message</h2>
+    <div class="secret">
+      <svg class="secret-flower" id="secretFlower" aria-hidden="true"><use href="#spider"/></svg>
+      <p>There's a message waiting just for you…</p>
+      <button class="primary" id="reveal" aria-expanded="false" aria-controls="secretText">Open my secret message</button>
+      <div id="secretText">Camila, I hope this makes you smile. You deserve to feel appreciated, cared for, and respected. I'm really glad I got to know you.<br><br>And here's the real secret: I smile at my phone every time your name shows up. ♡</div>
+    </div>
+    <p class="note">Red spider lilies are said to bloom where two people are destined to meet again.</p>
+    <div class="next"><button class="link" data-go="question">Next: a question →</button></div>
+  </div>
+</section>
+
+<!-- QUESTION -->
+<section class="panel" id="question" aria-labelledby="questionTitle">
+  <div class="card question-card">
+    <svg class="deco q-left" aria-hidden="true"><use href="#lily"/></svg>
+    <svg class="deco q-right" aria-hidden="true"><use href="#spider"/></svg>
+    <p class="eyebrow">a little question for</p>
+    <p class="script-title medium">Camila</p>
+    <p>You make my days a little brighter, and I wanted to ask you something…</p>
+    <h2 id="questionTitle" class="the-question">Would you like to be my girlfriend?</h2>
+    <div class="actions">
+      <button class="primary glow-btn" id="yes">Yes ♡</button>
+      <button class="soft" id="think">I'd like to think about it</button>
+    </div>
+    <div id="reply" role="status" aria-live="polite"></div>
+    <p class="note">No pressure, ever. Whatever you feel is okay.</p>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="panel" id="countdown-page" aria-labelledby="countTitle">
+  <div class="card">
+    <p class="eyebrow">counting every second</p>
+    <h2 id="countTitle">A countdown to our date</h2>
+    <p>Choose a date together, and this little clock keeps track until then.</p>
+    <label for="dateInput">Our date</label>
+    <input type="datetime-local" id="dateInput">
+    <div class="count" id="countdown" aria-live="off">
+      <p class="count-empty">Choose a date above ♡</p>
+    </div>
+    <p class="note">The countdown runs on your device and remembers the date in this browser.</p>
+    <div class="actions"><button class="primary" id="musicButton">Play a little tune ♪</button></div>
+    <p class="note" id="musicNote">A short original melody. Tap to play or stop. Your phone may need you to tap first.</p>
+  </div>
+</section>
+
+<!-- POSTER -->
+<section class="panel" id="poster" aria-labelledby="posterTitle">
+  <div class="card">
+    <h2 id="posterTitle">Your little poster</h2>
+    <div class="poster">
+      <svg class="poster-flower pf-l" aria-hidden="true"><use href="#spider"/></svg>
+      <svg class="poster-flower pf-r" aria-hidden="true"><use href="#lily"/></svg>
+      <div class="small">A little note for</div>
+      <div class="big" id="posterName">CAMILA</div>
+      <div class="poster-message" id="posterText">You make ordinary days feel a little more special.</div>
+      <div class="poster-hearts" aria-hidden="true">♡ ✦ ♡</div>
+    </div>
+    <div class="editor">
+      <label for="nameInput">Name on the poster</label><input id="nameInput" value="Camila" maxlength="35">
+      <label for="posterInput">Poster message</label><textarea id="posterInput" maxlength="220">You make ordinary days feel a little more special.</textarea>
+    </div>
+    <div class="actions"><button class="primary" onclick="window.print()">Print / Save poster</button><button class="soft" id="resetPoster">Reset poster</button></div>
+    <p class="note">Edit the words, then save the poster as a PDF from your phone's print menu.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">made with care, just for you ✦</footer>
+
+<div class="celebrate" id="celebrate" aria-hidden="true"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
