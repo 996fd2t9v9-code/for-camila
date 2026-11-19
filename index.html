@@ -3,66 +3,189 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#ffe4ef">
-<title>For Camila 💗</title>
+<meta name="theme-color" content="#0b0609">
+<meta name="description" content="A little website made just for Camila">
+<title>For Camila 🥀</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--pink:#f7a8c7;--deep:#bd3e78;--ink:#71324f;--pale:#fff0f6}
+:root{--black:#0b0609;--night:#140a12;--burgundy:#5a0f24;--wine:#8b1a3a;--red:#c0283f;--purple:#3d1850;--violet:#a57cc9;--silver:#c9c3d1;--bright:#f1eef6;--ink:#e4dde9;--muted:#a99fb3;
+--serif:"Cormorant Garamond",Georgia,serif;--sans:Quicksand,ui-rounded,"Trebuchet MS",system-ui,sans-serif}
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;color:var(--ink);background:linear-gradient(135deg,#fff0f6,#ffd6e7 55%,#fff0f6)}
-header{position:sticky;top:0;z-index:5;background:#fffafceF;backdrop-filter:blur(10px);padding:12px 10px;border-bottom:1px solid #f6d1e0}
-nav{display:flex;justify-content:center;gap:7px;flex-wrap:wrap}
-nav button{background:#fff0f6;color:#a83268;border:1px solid #f4c2d6;padding:10px 13px;border-radius:999px;font-weight:700}
-nav button.active{background:#c83e79;color:white}
-main{width:min(100% - 26px,680px);margin:22px auto 48px}
-.panel{display:none}.panel.active{display:block}
-.card{background:#ffffffed;border:1px solid white;border-radius:26px;padding:clamp(20px,5vw,36px);box-shadow:0 16px 48px #a83f6b1c;text-align:center;margin-bottom:18px}
-h1,h2,h3{font-family:Georgia,serif;color:#a83268}
-h1{font-size:clamp(36px,9vw,54px);margin:10px 0}
-h2{font-size:clamp(25px,6vw,34px)}
-p{line-height:1.7}
-button,.button{border:0;border-radius:999px;padding:12px 17px;font-size:14px;font-weight:700;cursor:pointer}
-.primary{background:linear-gradient(135deg,#e76a9c,#c83e79);color:white}
-.soft{background:#fff0f6;color:#a83268;border:1px solid #f4c2d6}
-.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:17px}
-.flower{font-size:48px}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:800;color:#c45c88}
-.poster{padding:28px 18px;border-radius:22px;background:radial-gradient(circle at top,#fff 0,#fff0f6 48%,#ffd5e6 100%);border:2px solid #f3b8d0}
-.poster .big{font-family:Georgia,serif;font-size:clamp(34px,9vw,52px);color:#b83270;margin:12px 0}
-.poster .small{letter-spacing:.16em;text-transform:uppercase;font-size:11px;color:#b45a83}
-.poster .poster-message{font-family:Georgia,serif;font-size:20px;line-height:1.5;white-space:pre-wrap}
-label{display:block;text-align:left;font-size:13px;font-weight:700;margin:14px 0 6px}
-input,textarea{width:100%;border:1px solid #edbfd2;border-radius:12px;padding:12px;font:inherit;color:var(--ink);background:#fffafd}
-input[type=file]{font-size:12px}textarea{min-height:100px;resize:vertical}
-.editor{margin-top:18px}.note{font-size:12px;color:#a66a86}
-.letter{background:#fffafc;border:1px solid #f5d4e1;border-radius:18px;padding:20px;text-align:left;white-space:pre-wrap;line-height:1.8;font-family:Georgia,serif}
-#reply{display:none;margin-top:18px;background:#fff0f6;padding:14px;border-radius:14px}#reply.show{display:block}
-.secret{background:#fff0f6;border:1px solid #f2c4d7;border-radius:18px;padding:20px}
-#secretText{display:none;font-family:Georgia,serif;font-size:19px;line-height:1.7;margin-top:15px}
-#secretText.show{display:block}
-.count{font-size:clamp(26px,7vw,40px);font-weight:800;color:#bd3e78;letter-spacing:.03em;margin:12px 0}
-.count span{display:inline-block;min-width:60px}
-@media print{header,.editor,.actions,.note{display:none!important}body{background:white}.panel{display:none!important}#poster.panel{display:block!important}main{width:100%;margin:0}.card{box-shadow:none;border:0}.poster{min-height:90vh;display:flex;flex-direction:column;justify-content:center}}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;font-family:var(--sans);color:var(--ink);overflow-x:hidden;
+background:radial-gradient(ellipse at 15% -10%,#4a0e26 0,transparent 55%),radial-gradient(ellipse at 100% 100%,#2d1145 0,transparent 55%),radial-gradient(circle at 50% 50%,#160910 0,var(--black) 80%) fixed;background-color:var(--black)}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+background-image:radial-gradient(1px 1px at 12% 22%,#fff8 50%,transparent 51%),radial-gradient(1px 1px at 68% 12%,#fff6 50%,transparent 51%),radial-gradient(1.5px 1.5px at 85% 48%,#d9c8ff88 50%,transparent 51%),radial-gradient(1px 1px at 33% 78%,#fff5 50%,transparent 51%),radial-gradient(1px 1px at 52% 40%,#fff4 50%,transparent 51%),radial-gradient(1.5px 1.5px at 8% 64%,#ffd6e055 50%,transparent 51%),radial-gradient(1px 1px at 92% 85%,#fff5 50%,transparent 51%);animation:twinkle 6s ease-in-out infinite alternate}
+@keyframes twinkle{to{opacity:.2}}
+header{position:sticky;top:0;z-index:10;background:#0b0609cc;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:10px 8px;border-bottom:1px solid #c9c3d126}
+nav{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;padding:2px 4px;justify-content:flex-start}
+nav::-webkit-scrollbar{display:none}
+@media(min-width:720px){nav{justify-content:center}}
+nav button{flex:0 0 auto;background:#ffffff08;color:var(--silver);border:1px solid #c9c3d133;padding:9px 14px;border-radius:999px;font-weight:600;font-family:var(--sans);transition:.25s}
+nav button:hover{border-color:#c9c3d177;color:var(--bright)}
+nav button.active{background:linear-gradient(135deg,var(--wine),var(--purple));color:#fff;border-color:#e6c3d655;box-shadow:0 0 18px #8b1a3a66}
+main{position:relative;z-index:1;width:min(100% - 24px,700px);margin:22px auto 56px}
+.panel{display:none}.panel.active{display:block;animation:rise .6s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.card{position:relative;overflow:hidden;background:linear-gradient(160deg,#1d0c18e6,#120914eb 60%,#1a0d22e6);border:1px solid #c9c3d12e;border-radius:26px;padding:clamp(22px,5vw,40px);box-shadow:0 20px 60px #000a,inset 0 1px 0 #ffffff14;text-align:center;margin-bottom:18px}
+.card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;box-shadow:inset 0 0 0 1px #ffffff08,inset 0 0 80px #5a0f2433}
+h1,h2,h3{font-family:var(--serif);font-weight:700;margin:10px 0;background:linear-gradient(100deg,#f1eef6 0%,#c9c3d1 35%,#f6d8e2 55%,#c9c3d1 75%,#f1eef6 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 7s linear infinite}
+@keyframes shine{to{background-position:200% center}}
+h1{font-size:clamp(46px,13vw,76px);line-height:1;letter-spacing:.02em}
+h2{font-size:clamp(28px,7vw,38px);line-height:1.15}
+h3{font-size:22px}
+p{line-height:1.75}
+.lead{font-family:var(--serif);font-size:clamp(19px,4.6vw,22px);color:var(--ink)}
+button,.button{border:0;border-radius:999px;padding:12px 18px;font-size:14px;font-weight:700;font-family:var(--sans);cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+button:active{transform:scale(.96)}
+button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--violet);outline-offset:3px}
+.primary{background:linear-gradient(135deg,var(--red),var(--wine) 55%,var(--purple));color:#fff;box-shadow:0 8px 24px #8b1a3a55,inset 0 1px 0 #ffffff33}
+.primary:hover{box-shadow:0 10px 30px #c0283f77,inset 0 1px 0 #ffffff33;transform:translateY(-1px)}
+.soft{background:#ffffff0a;color:var(--silver);border:1px solid #c9c3d14d}
+.soft:hover{background:#ffffff14;color:var(--bright)}
+.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:18px}
+.flower{font-size:48px}
+.eyebrow{text-transform:uppercase;letter-spacing:.24em;font-size:11px;font-weight:700;color:var(--violet)}
+.note{font-size:12.5px;color:var(--muted)}
+.divider{display:flex;align-items:center;gap:12px;justify-content:center;color:var(--silver);margin:22px 0;opacity:.8}
+.divider::before,.divider::after{content:"";height:1px;flex:1;max-width:140px;background:linear-gradient(90deg,transparent,#c9c3d188,transparent)}
+/* flower decorations */
+.ornament{display:flex;justify-content:center;align-items:flex-end;gap:2px;margin:-4px 0 6px}
+.ornament svg{filter:drop-shadow(0 0 10px #c0283f55)}
+.ornament .sl{width:70px;height:70px;color:var(--red);animation:sway 6s ease-in-out infinite;transform-origin:50% 90%}
+.ornament .sl.small{width:48px;height:48px;opacity:.85;animation-delay:-2s}
+.ornament .ly{width:56px;height:56px;color:var(--silver);animation:sway 7s ease-in-out infinite reverse;transform-origin:50% 90%}
+@keyframes sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+.corner{position:fixed;z-index:0;pointer-events:none;opacity:.22;color:var(--red)}
+.corner.tl{top:58px;left:-30px;width:180px;height:180px;transform:rotate(140deg)}
+.corner.br{bottom:-30px;right:-24px;width:220px;height:220px;transform:rotate(-20deg)}
+.corner.lily{bottom:12%;left:-22px;width:120px;height:120px;color:var(--silver);opacity:.12;transform:rotate(30deg)}
+.petal{position:fixed;top:-20px;z-index:0;pointer-events:none;width:10px;height:14px;border-radius:150% 0 150% 0;background:linear-gradient(135deg,#d1344f,#5a0f24);opacity:.7;animation:fall linear infinite}
+.petal.v{background:linear-gradient(135deg,#b48fd6,#3d1850)}
+.petal.s{background:linear-gradient(135deg,#f1eef6,#8f8799);opacity:.45}
+@keyframes fall{0%{transform:translate3d(0,-20px,0) rotate(0)}100%{transform:translate3d(var(--drift,60px),105vh,0) rotate(540deg)}}
+/* welcome */
+.welcome-name{position:relative;display:inline-block}
+.sparkle{display:inline-block;animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.25);opacity:.6}}
+.faves{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:16px}
+.fave{perspective:800px;height:150px;background:none;padding:0;border-radius:18px}
+.fave-inner{position:relative;width:100%;height:100%;transition:transform .7s cubic-bezier(.2,.7,.2,1);transform-style:preserve-3d}
+.fave.flipped .fave-inner{transform:rotateY(180deg)}
+.fave-face{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:12px;border-radius:18px;border:1px solid #c9c3d133;backface-visibility:hidden;-webkit-backface-visibility:hidden;color:var(--ink)}
+.fave-front{background:linear-gradient(160deg,#2a0f20,#1a0c24)}
+.fave-front .emo{font-size:36px;transition:transform .3s}
+.fave:hover .emo{transform:scale(1.15) rotate(-6deg)}
+.fave-front b{font-family:var(--serif);font-size:19px;color:var(--bright)}
+.fave-front small{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.fave-back{transform:rotateY(180deg);background:linear-gradient(160deg,#5a0f24,#3d1850);font-family:var(--serif);font-size:16.5px;line-height:1.4;font-weight:500}
+/* question */
+.question{font-size:clamp(32px,8.5vw,46px)}
+.ring{font-size:54px;display:inline-block;animation:float 3.5s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-8px)}}
+#reply{display:none;margin-top:20px;background:linear-gradient(135deg,#5a0f2466,#3d185066);border:1px solid #c9c3d133;padding:16px;border-radius:16px;font-family:var(--serif);font-size:20px;color:var(--bright)}
+#reply.show{display:block;animation:rise .5s ease both}
+.burst{position:fixed;z-index:50;pointer-events:none;font-size:22px;animation:burst 1.6s ease-out forwards}
+@keyframes burst{0%{transform:translate(0,0) scale(.4);opacity:1}100%{transform:translate(var(--x),var(--y)) scale(1.2) rotate(var(--r));opacity:0}}
+/* poster */
+.poster{padding:30px 18px;border-radius:22px;background:radial-gradient(circle at top,#3a1230 0,#1a0a17 55%,#0e0610 100%);border:1px solid #c9c3d155;box-shadow:inset 0 0 0 6px #0b0609,inset 0 0 0 7px #c9c3d133}
+.poster .big{font-family:var(--serif);font-weight:700;font-size:clamp(38px,10vw,58px);color:var(--bright);margin:12px 0;letter-spacing:.06em;text-shadow:0 0 24px #c0283f88}
+.poster .small{letter-spacing:.24em;text-transform:uppercase;font-size:11px;color:var(--violet)}
+.poster .poster-message{font-family:var(--serif);font-size:22px;line-height:1.5;white-space:pre-wrap;color:var(--ink)}
+label{display:block;text-align:left;font-size:13px;font-weight:700;margin:14px 0 6px;color:var(--silver)}
+input,textarea{width:100%;border:1px solid #c9c3d140;border-radius:12px;padding:12px;font:inherit;font-size:16px;color:var(--bright);background:#0b0609b3;color-scheme:dark;transition:border-color .2s}
+input:focus,textarea:focus{border-color:var(--violet)}
+textarea{min-height:100px;resize:vertical}
+.editor{margin-top:18px}
+details.editor summary{cursor:pointer;color:var(--silver);font-size:14px;font-weight:600;list-style:none}
+details.editor summary::before{content:"✎ "}
+/* letter */
+.envelope-seal{width:54px;height:54px;margin:4px auto 10px;border-radius:50%;display:grid;place-items:center;font-size:24px;background:radial-gradient(circle at 35% 30%,#d64560,#7a1430 70%);box-shadow:0 4px 14px #000a,inset 0 -3px 6px #0006}
+.letter{position:relative;background:linear-gradient(180deg,#1f0f1c,#160b17);border:1px solid #c9c3d133;border-radius:18px;padding:clamp(20px,5vw,32px);text-align:left;white-space:pre-wrap;line-height:1.65;font-family:var(--serif);font-size:clamp(18px,4.4vw,20px);color:var(--ink);box-shadow:inset 0 0 40px #5a0f2433}
+.letter::first-line{color:var(--bright);font-weight:700}
+/* secret */
+.secret{background:linear-gradient(160deg,#ffffff06,#3d185033);border:1px solid #c9c3d133;border-radius:20px;padding:24px 18px}
+.lock{font-size:44px;display:inline-block;transition:transform .5s}
+.secret.open .lock{transform:rotate(-12deg) scale(1.1)}
+#secretText{display:none;font-family:var(--serif);font-size:clamp(20px,5vw,23px);line-height:1.7;margin-top:16px;color:var(--bright)}
+#secretText.show{display:block;animation:reveal 1s ease both}
+@keyframes reveal{from{opacity:0;filter:blur(8px);letter-spacing:.2em}to{opacity:1;filter:none}}
+/* countdown */
+.count{margin:16px 0;font-family:var(--serif);font-size:clamp(20px,5vw,24px);color:var(--silver)}
+.count-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.count-grid div{background:linear-gradient(160deg,#2a0f20,#1a0c24);border:1px solid #c9c3d133;border-radius:16px;padding:14px 4px}
+.count-grid b{display:block;font-family:var(--serif);font-size:clamp(30px,9vw,44px);line-height:1;color:var(--bright);text-shadow:0 0 16px #c0283f88}
+.count-grid small{font-family:var(--sans);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.next{margin-top:22px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.petal{display:none}}
+@media print{header,.editor,.actions,.note,.corner,.petal,.next{display:none!important}body{background:white}body::before{display:none}.panel{display:none!important}#poster.panel{display:block!important}main{width:100%;margin:0}.card{box-shadow:none;border:0;background:white}.card::after{display:none}.card>h2{display:none}.poster{min-height:90vh;display:flex;flex-direction:column;justify-content:center;background:white;box-shadow:none;border:2px solid #5a0f24}.poster .big{color:#5a0f24;text-shadow:none}.poster .poster-message{color:#2a0f20}.poster .small{color:#3d1850}h1,h2,h3{-webkit-text-fill-color:#5a0f24;color:#5a0f24}}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <defs>
+  <symbol id="spider-lily" viewBox="0 0 100 100">
+   <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+    <path d="M50 58 Q36 34 20 14"/><path d="M50 58 Q44 30 40 6"/><path d="M50 58 Q56 30 62 6"/><path d="M50 58 Q66 34 82 14"/><path d="M50 58 Q28 44 8 34"/><path d="M50 58 Q72 44 92 34"/>
+   </g>
+   <g fill="currentColor"><circle cx="20" cy="14" r="2"/><circle cx="40" cy="6" r="2"/><circle cx="62" cy="6" r="2"/><circle cx="82" cy="14" r="2"/><circle cx="8" cy="34" r="2"/><circle cx="92" cy="34" r="2"/></g>
+   <g fill="currentColor">
+    <path d="M50 60 C40 52 30 50 24 40 C34 44 42 46 50 60Z"/><path d="M50 60 C60 52 70 50 76 40 C66 44 58 46 50 60Z"/>
+    <path d="M50 60 C44 48 42 36 46 24 C48 36 50 46 50 60Z"/><path d="M50 60 C56 48 58 36 54 24 C52 36 50 46 50 60Z"/>
+    <path d="M50 60 C38 60 26 64 18 58 C30 56 40 56 50 60Z"/><path d="M50 60 C62 60 74 64 82 58 C70 56 60 56 50 60Z"/>
+   </g>
+   <path d="M50 60 Q49 80 50 100" stroke="#3b5a3a" stroke-width="2" fill="none"/>
+  </symbol>
+  <symbol id="lily" viewBox="0 0 100 100">
+   <g fill="currentColor" opacity=".9">
+    <path d="M50 62 C38 48 40 24 50 8 C60 24 62 48 50 62Z"/>
+    <path d="M50 62 C34 58 18 44 12 26 C30 32 44 46 50 62Z"/>
+    <path d="M50 62 C66 58 82 44 88 26 C70 32 56 46 50 62Z"/>
+   </g>
+   <g fill="#0b0609" opacity=".35"><path d="M50 58 Q49 36 50 14 Q51 36 50 58Z"/></g>
+   <g stroke="#c0283f" stroke-width="1.2" fill="none"><path d="M50 60 Q44 44 40 34"/><path d="M50 60 Q50 42 50 30"/><path d="M50 60 Q56 44 60 34"/></g>
+   <g fill="#c0283f"><circle cx="40" cy="34" r="2"/><circle cx="50" cy="30" r="2"/><circle cx="60" cy="34" r="2"/></g>
+   <path d="M50 62 Q51 82 50 100" stroke="#3b5a3a" stroke-width="2" fill="none"/>
+  </symbol>
+ </defs>
+</svg>
+<svg class="corner tl" aria-hidden="true"><use href="#spider-lily"/></svg>
+<svg class="corner br" aria-hidden="true"><use href="#spider-lily"/></svg>
+<svg class="corner lily" aria-hidden="true"><use href="#lily"/></svg>
 <header><nav aria-label="Website pages">
-<button class="active" data-page="home">Home 💗</button>
-<button data-page="poster">Poster 🌷</button>
+<button class="active" data-page="home">Welcome 🥀</button>
 <button data-page="letter">Letter 💌</button>
-<button data-page="surprise">Surprise ✨</button>
+<button data-page="surprise">Secret 🔮</button>
+<button data-page="question">Question 💍</button>
+<button data-page="countdown-page">Countdown ⏳</button>
+<button data-page="poster">Poster 🌷</button>
 </nav></header>
 <main>
 <section class="panel active" id="home"><div class="card">
-<div class="flower">🌷</div><div class="eyebrow">A little question for</div><h1>Camila</h1>
-<p>You make my days a little brighter, and I wanted to ask you something...</p>
-<h2>Would you like to be my girlfriend? 💗</h2>
-<div class="actions"><button class="primary" id="yes">Yes! 💕</button><button class="soft" id="think">I'd like to think about it</button></div>
-<div id="reply" role="status" aria-live="polite"></div><p class="note">Made with care, just for you ✨</p>
+<div class="ornament" aria-hidden="true"><svg class="sl small"><use href="#spider-lily"/></svg><svg class="ly"><use href="#lily"/></svg><svg class="sl small"><use href="#spider-lily"/></svg></div>
+<div class="eyebrow">Welcome to a little world made for</div>
+<h1 class="welcome-name">Camila</h1>
+<p class="lead">Every lily and spider lily here was placed with you in mind. Take your time, wander around, and know that every word was written just for you <span class="sparkle">✨</span></p>
+<div class="actions"><button class="primary" data-goto="letter">Open your letter 💌</button><button class="soft" data-goto="question">Skip to the question 💍</button></div>
+<div class="divider">♡</div>
+<h2>Little things that are so <em>you</em></h2>
+<p class="note">Tap each card to flip it 🖤</p>
+<div class="faves">
+ <button class="fave" aria-label="Anime"><div class="fave-inner"><div class="fave-face fave-front"><span class="emo">🌸</span><b>Anime</b><small>tap me</small></div><div class="fave-face fave-back">If life were an anime, you'd be the main character — and I'd be the side character who's hopelessly fond of you.</div></div></button>
+ <button class="fave" aria-label="FNAF"><div class="fave-inner"><div class="fave-face fave-front"><span class="emo">🐻</span><b>FNAF</b><small>tap me</small></div><div class="fave-face fave-back">I'd survive five nights (and every night after) if it meant keeping you company at 3&nbsp;a.m. 🔦</div></div></button>
+ <button class="fave" aria-label="LEGO"><div class="fave-inner"><div class="fave-face fave-front"><span class="emo">🧱</span><b>LEGO</b><small>tap me</small></div><div class="fave-face fave-back">I think we fit together like two perfect bricks — click. Let's build something lovely, piece by piece.</div></div></button>
+ <button class="fave" aria-label="Motorcycles"><div class="fave-inner"><div class="fave-face fave-front"><span class="emo">🏍️</span><b>Motorcycles</b><small>tap me</small></div><div class="fave-face fave-back">Wherever the road goes, I'd love to be along for the ride with you. Helmets on, hearts full.</div></div></button>
+ <button class="fave" aria-label="Hello Kitty"><div class="fave-inner"><div class="fave-face fave-front"><span class="emo">🎀</span><b>Hello Kitty</b><small>tap me</small></div><div class="fave-face fave-back">Your sweet side is one of my favourite things — soft, kind and impossible not to adore.</div></div></button>
+ <button class="fave" aria-label="Kuromi"><div class="fave-inner"><div class="fave-face fave-front"><span class="emo">💜</span><b>Kuromi</b><small>tap me</small></div><div class="fave-face fave-back">…and that little mischievous spark of yours? I adore that too. Cute <em>and</em> a bit chaotic — perfect. 😈</div></div></button>
+</div>
+<p class="note" style="margin-top:20px">Made with care, just for you 🥀</p>
 </div></section>
 
 <section class="panel" id="poster"><div class="card">
 <h2>Your little poster 🌸</h2><div class="poster">
-<div style="font-size:32px">🌷 💗 🌷</div><div class="small">A little note for</div>
-<div class="big" id="posterName">CAMILA</div><div class="poster-message" id="posterText">You make ordinary days feel a little more special.</div><div style="font-size:27px;margin-top:16px">♡ ♡ ♡</div>
+<div class="ornament" aria-hidden="true"><svg class="sl small"><use href="#spider-lily"/></svg><svg class="ly"><use href="#lily"/></svg><svg class="sl small"><use href="#spider-lily"/></svg></div><div class="small">A little note for</div>
+<div class="big" id="posterName">CAMILA</div><div class="poster-message" id="posterText">You make ordinary days feel a little more special.</div><div style="font-size:24px;margin-top:16px;color:var(--silver)">♡ ♡ ♡</div>
 </div>
 <div class="editor"><label for="nameInput">Name on the poster</label><input id="nameInput" value="Camila" maxlength="35">
 <label for="posterInput">Poster message</label><textarea id="posterInput" maxlength="220">You make ordinary days feel a little more special.</textarea></div>
@@ -71,32 +194,63 @@ input[type=file]{font-size:12px}textarea{min-height:100px;resize:vertical}
 </div></section>
 
 <section class="panel" id="letter"><div class="card">
+<div class="envelope-seal" aria-hidden="true">🥀</div>
+<div class="eyebrow">Sealed with love</div>
 <h2>A letter for Camila 💌</h2><div class="letter" id="letterPreview"></div>
-<div class="editor"><label for="letterInput">Make this letter yours — edit any words you like</label><textarea id="letterInput" rows="12"></textarea></div>
+<details class="editor"><summary>Make this letter yours — edit any words you like</summary><label for="letterInput">Letter text</label><textarea id="letterInput" rows="12"></textarea>
 <div class="actions"><button class="primary" id="updateLetter">Update letter</button><button class="soft" id="copyLetter">Copy letter</button><button class="soft" id="resetLetter">Restore suggested letter</button></div>
-<p class="note">Your edits stay in this browser page. Copy the letter before leaving if you want to keep it.</p>
+<p class="note">Your edits stay in this browser page. Copy the letter before leaving if you want to keep it.</p></details>
+<div class="actions next"><button class="primary" data-goto="surprise">There's a secret, too… 🔮</button></div>
 </div></section>
 
 <section class="panel" id="surprise"><div class="card">
-<h2>A little surprise for you ✨</h2>
-<div class="secret"><p>There's a message waiting just for you...</p><button class="primary" id="reveal">Open my secret message 💌</button>
-<div id="secretText">Camila, I hope this makes you smile. You deserve to feel appreciated, cared for, and respected. I'm really glad I got to know you. 💗</div></div>
-<div style="height:20px"></div><h2>A countdown to our date 🌷</h2>
+<div class="ornament" aria-hidden="true"><svg class="sl"><use href="#spider-lily"/></svg></div>
+<h2>A little secret for you ✨</h2>
+<div class="secret" id="secretBox"><span class="lock" aria-hidden="true">🔮</span><p>There's a message waiting just for you...</p><button class="primary" id="reveal">Open my secret message 💌</button>
+<div id="secretText" aria-live="polite">Camila, I hope this makes you smile. You deserve to feel appreciated, cared for, and respected. I'm really glad I got to know you. 💗<br><br>P.S. Spider lilies are said to bloom where two souls are meant to meet. I like to think that's how I found you. 🥀</div></div>
+<div class="actions"><button class="primary" id="musicButton">Play a little tune 🎵</button></div>
+<p class="note" id="musicNote">Optional original tones — tap to play or pause. Your phone may require the button to be tapped first.</p>
+<div class="actions next"><button class="soft" data-goto="question">I have one more thing to ask… 💍</button></div>
+</div></section>
+
+<section class="panel" id="question"><div class="card">
+<div class="ornament" aria-hidden="true"><svg class="sl small"><use href="#spider-lily"/></svg><svg class="ly"><use href="#lily"/></svg><svg class="sl small"><use href="#spider-lily"/></svg></div>
+<div class="eyebrow">A little question for</div><h1>Camila</h1>
+<p class="lead">You make my days a little brighter, and I wanted to ask you something...</p>
+<span class="ring" aria-hidden="true">💍</span>
+<h2 class="question">Would you like to be my girlfriend?</h2>
+<div class="actions"><button class="primary" id="yes">Yes! 💕</button><button class="soft" id="think">I'd like to think about it</button></div>
+<div id="reply" role="status" aria-live="polite"></div>
+<p class="note">No pressure at all — whatever you feel is okay 🖤</p>
+</div></section>
+
+<section class="panel" id="countdown-page"><div class="card">
+<div class="ornament" aria-hidden="true"><svg class="ly"><use href="#lily"/></svg></div>
+<h2>A countdown to our date 🌷</h2>
 <p>Choose a date together, then this little countdown will keep track.</p>
 <label for="dateInput">Our date</label><input type="datetime-local" id="dateInput">
 <div class="count" id="countdown">Choose a date above 💕</div>
-<p class="note">The countdown runs on the visitor's device. Set a date and time that works for both of you.</p>
-<div class="actions"><button class="primary" id="musicButton">Play a little tune 🎵</button></div>
-<p class="note" id="musicNote">Optional original tones — tap to play or pause. Your phone may require the button to be tapped first.</p>
+<p class="note">The countdown runs on this device and remembers the date you choose. Set a date and time that works for both of you.</p>
 </div></section>
 </main>
 <script>
 const $=id=>document.getElementById(id);
-document.querySelectorAll('nav button').forEach(btn=>btn.addEventListener('click',()=>{
- document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b===btn));
- document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===btn.dataset.page));
-}));
-$('yes').onclick=()=>{$('reply').textContent="You just made me really happy, Camila! 💖";$('reply').classList.add('show')};
+function showPage(page){
+ document.querySelectorAll('nav button').forEach(b=>{const on=b.dataset.page===page;b.classList.toggle('active',on);if(on)b.scrollIntoView({block:'nearest',inline:'center'})});
+ document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===page));
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+document.querySelectorAll('nav button').forEach(btn=>btn.addEventListener('click',()=>showPage(btn.dataset.page)));
+document.querySelectorAll('[data-goto]').forEach(btn=>btn.addEventListener('click',()=>showPage(btn.dataset.goto)));
+document.querySelectorAll('.fave').forEach(c=>c.addEventListener('click',()=>c.classList.toggle('flipped')));
+function heartBurst(x,y){
+ const icons=['💗','🖤','💜','🥀','✨','🤍','🌸'];
+ for(let i=0;i<28;i++){const h=document.createElement('span');h.className='burst';h.textContent=icons[i%icons.length];
+  const a=Math.random()*Math.PI*2,d=90+Math.random()*180;
+  h.style.left=x+'px';h.style.top=y+'px';h.style.setProperty('--x',Math.cos(a)*d+'px');h.style.setProperty('--y',Math.sin(a)*d-60+'px');h.style.setProperty('--r',(Math.random()*360-180)+'deg');
+  document.body.appendChild(h);setTimeout(()=>h.remove(),1700);}
+}
+$('yes').onclick=e=>{$('reply').textContent="You just made me really happy, Camila! 💖 I promise to treat you like the treasure you are.";$('reply').classList.add('show');const r=e.currentTarget.getBoundingClientRect();heartBurst(r.left+r.width/2,r.top+r.height/2)};
 $('think').onclick=()=>{$('reply').textContent="That's completely okay. Take your time — no pressure. 💗";$('reply').classList.add('show')};
 function updatePoster(){$('posterName').textContent=$('nameInput').value.trim().toUpperCase()||'CAMILA';$('posterText').textContent=$('posterInput').value}
 $('nameInput').addEventListener('input',updatePoster);$('posterInput').addEventListener('input',updatePoster);
@@ -104,6 +258,8 @@ $('resetPoster').onclick=()=>{$('nameInput').value='Camila';$('posterInput').val
 const suggestedLetter=`Dear Camila,
 
 I wanted to make something a little special for you because there is something I've been wanting to ask. I really enjoy talking with you, spending time with you, and getting to know you. You have a way of making my days brighter, and I appreciate the little moments we share.
+
+I love how you light up when you talk about the things you love — your anime, building LEGO, motorcycles, FNAF, and of course Hello Kitty and Kuromi. Those little details are part of what makes you so wonderfully you.
 
 I think you're a wonderful person, and I'd love the chance to make more happy memories together. I don't want you to feel pressured to answer a certain way — I just wanted to be honest about how I feel and ask you properly.
 
@@ -118,10 +274,11 @@ function updateLetter(){$('letterPreview').textContent=$('letterInput').value}
 $('updateLetter').onclick=updateLetter;$('resetLetter').onclick=()=>{$('letterInput').value=suggestedLetter;updateLetter()};
 $('copyLetter').onclick=async()=>{try{await navigator.clipboard.writeText($('letterInput').value);$('copyLetter').textContent='Copied! 💗'}catch(e){$('letterInput').select();document.execCommand('copy');$('copyLetter').textContent='Copied! 💗'}};
 updateLetter();
-$('reveal').onclick=()=>{$('secretText').classList.toggle('show');$('reveal').textContent=$('secretText').classList.contains('show')?'Hide my message 💗':'Open my secret message 💌'};
+$('reveal').onclick=()=>{$('secretText').classList.toggle('show');$('secretBox').classList.toggle('open',$('secretText').classList.contains('show'));$('reveal').textContent=$('secretText').classList.contains('show')?'Hide my message 💗':'Open my secret message 💌'};
 let countdownTimer;
 $('dateInput').addEventListener('input',()=>{
  if(countdownTimer)clearInterval(countdownTimer);
+ try{localStorage.setItem('camilaDate',$('dateInput').value)}catch(e){}
  const update=()=>{
   const target=new Date($('dateInput').value).getTime();
   if(!Number.isFinite(target)){ $('countdown').textContent='Choose a date above 💕';return; }
@@ -130,7 +287,7 @@ $('dateInput').addEventListener('input',()=>{
   const d=Math.floor(diff/86400000);diff%=86400000;
   const h=Math.floor(diff/3600000);diff%=3600000;
   const m=Math.floor(diff/60000);const s=Math.floor(diff%60000/1000);
-  $('countdown').textContent=`${d} days · ${h} hrs · ${m} min · ${s} sec`;
+  $('countdown').innerHTML=`<div class="count-grid" aria-label="${d} days ${h} hours ${m} minutes ${s} seconds"><div><b>${d}</b><small>days</small></div><div><b>${h}</b><small>hours</small></div><div><b>${m}</b><small>mins</small></div><div><b>${s}</b><small>secs</small></div></div>`;
  };
  update();countdownTimer=setInterval(update,1000);
 });
@@ -152,5 +309,12 @@ function playTune(){
  setTimeout(()=>{musicOn=false;$('musicButton').textContent='Play a little tune 🎵';oscillators=[]},2600);
 }
 $('musicButton').onclick=playTune;
+try{const saved=localStorage.getItem('camilaDate');if(saved){$('dateInput').value=saved;$('dateInput').dispatchEvent(new Event('input'))}}catch(e){}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+ const kinds=['','','v','s'],n=innerWidth<600?10:18;
+ for(let i=0;i<n;i++){const p=document.createElement('span');p.className='petal '+kinds[i%kinds.length];
+  p.style.left=Math.random()*100+'vw';p.style.animationDuration=(10+Math.random()*12)+'s';p.style.animationDelay=(-Math.random()*20)+'s';
+  p.style.setProperty('--drift',(Math.random()*160-80)+'px');const sz=.6+Math.random()*.7;p.style.width=10*sz+'px';p.style.height=14*sz+'px';document.body.appendChild(p);}
+}
 </script>
 </body></html>
